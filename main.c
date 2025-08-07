@@ -82,7 +82,6 @@ int main(void) {
     {
         fprintf(saida, "%d\n", vetorAux2[i]);
     }
-    
 
     return 0;
 }
