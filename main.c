@@ -38,7 +38,7 @@ int main(void) {
     int *listaC = malloc(tamc * sizeof(int));
     int *listaR = malloc(tamr * sizeof(int));
  
-
+    //confere se houve erro na alocacao
     if (!listaD || !listaC || !listaR) {
         perror("Erro ao alocar memória");
         fclose(fd);
@@ -56,6 +56,8 @@ int main(void) {
     for (int i = 0; i < tamr; i++) fscanf(fr, "%d", &listaR[i]);
     printf("arquivos lidos\n");
     
+
+    // Cria vetores auxiliares para testar funções
     int *vetorAux1 = listaR;
     int tam = tamr;
     int *vetorAux2 = malloc(tam * sizeof(int));
@@ -71,9 +73,16 @@ int main(void) {
     //testar função aqui ⬆️⬆️⬆️
     end = clock();
 
+    //inrformação para o trabalho
     printf("tempo: %f\n", (double)(end - start) / CLOCKS_PER_SEC);
     printf("tam: %d\ntrocas: %" PRIu64 "\ncomparacoes: %" PRIu64 "\n", tam,trocas, comparacoes);
-    //mostrarVetor(vetorAux2, tam);
     
+    FILE *saida = fopen("saida.txt", "w");
+    for (int i = 0; i < tam; i++)
+    {
+        fprintf(saida, "%d\n", vetorAux2[i]);
+    }
+    
+
     return 0;
 }
