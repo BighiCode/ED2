@@ -5,6 +5,8 @@
 #include "insercaodireta.h"//2
 #include "insercaoBinaria.h"//3
 #include "shellSort.h"//4
+#include "selecaodireta.h"//5
+#include "heapsort.h"//6
 
 int main(void) {
     
@@ -71,7 +73,7 @@ int main(void) {
 
     start = clock();
     //testar função aqui ⬇️⬇️⬇️
-    shellSort(vetorAux2, tam);
+    heapsort(vetorAux2, tam);
     //testar função aqui ⬆️⬆️⬆️
     end = clock();
 
