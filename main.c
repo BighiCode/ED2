@@ -70,6 +70,8 @@ int main(void) {
     // Cria vetores auxiliares para testar funções
     int *vetorAux1 = listaR;
     int tam = tamr;
+    int inicio = 0;
+    int fim = tam - 1;
     int *vetorAux2 = malloc(tam * sizeof(int));
 
     printf("vetores necessarios criados\n");
@@ -79,7 +81,7 @@ int main(void) {
 
     start = clock();
     //testar função aqui ⬇️⬇️⬇️
-    bucketSort(vetorAux2, tam);
+    quicksortMediana(vetorAux2, inicio, fim);
     //testar função aqui ⬆️⬆️⬆️
     end = clock();
 
