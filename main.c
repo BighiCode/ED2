@@ -1,12 +1,18 @@
 #include "menu.h"
 #include "file.h"
 
-#include "bolha.h"//1
-#include "insercaodireta.h"//2
-#include "insercaoBinaria.h"//3
-#include "shellSort.h"//4
-#include "selecaodireta.h"//5
-#include "heapsort.h"//6
+#include "bolha.h"//1 e 2
+#include "insercaodireta.h"//3
+#include "insercaoBinaria.h"//4
+#include "shellSort.h"//5
+#include "selecaodireta.h"//6
+#include "heapsort.h"//7
+#include "quicksortcentro.h"//8
+#include "mergesort.h"//9
+#include "radixsort.h"//10
+#include "bucketsort.h"//11
+#include "quicksortfim.h"//12
+#include "quicksortmediana.h"//13
 
 int main(void) {
     
@@ -73,7 +79,7 @@ int main(void) {
 
     start = clock();
     //testar função aqui ⬇️⬇️⬇️
-    heapsort(vetorAux2, tam);
+    bucketSort(vetorAux2, tam);
     //testar função aqui ⬆️⬆️⬆️
     end = clock();
 
