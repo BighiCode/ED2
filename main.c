@@ -20,9 +20,9 @@ int main(void) {
     clock_t start, end;
 
     // Abre arquivos
-    FILE *fd = fopen("d", "r");
-    FILE *fc = fopen("c", "r");
-    FILE *fr = fopen("r", "r");
+    FILE *fd = fopen("gerador/d", "r");
+    FILE *fc = fopen("gerador/c", "r");
+    FILE *fr = fopen("gerador/r", "r");
 
     if (!fd || !fc || !fr) {
         perror("Erro ao abrir arquivos");
