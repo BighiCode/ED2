@@ -1,8 +1,9 @@
-#include "bolha.h"
 #include "menu.h"
 #include "file.h"
-#include "insercaodireta.h"
 
+#include "bolha.h"//1
+#include "insercaodireta.h"//2
+#include "insercaoBinaria.h"//3
 
 int main(void) {
     
@@ -69,7 +70,7 @@ int main(void) {
 
     start = clock();
     //testar função aqui ⬇️⬇️⬇️
-    insercaoDireta(vetorAux2, tam);
+    insercaoBinaria(vetorAux2, tam);
     //testar função aqui ⬆️⬆️⬆️
     end = clock();
 
