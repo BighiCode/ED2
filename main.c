@@ -1,7 +1,7 @@
 #include "bolha.h"
 #include "menu.h"
 #include "file.h"
-
+#include "insercaodireta.h"
 
 
 int main(void) {
@@ -69,7 +69,7 @@ int main(void) {
 
     start = clock();
     //testar função aqui ⬇️⬇️⬇️
-    ordenamentoBolhaCriterioParada(vetorAux2, tam);
+    insercaoDireta(vetorAux2, tam);
     //testar função aqui ⬆️⬆️⬆️
     end = clock();
 

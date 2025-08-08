@@ -5,13 +5,15 @@ void insercaoDireta(int *v, int n) {
         int chave = v[i];
         int j = i - 1;
 
-        // Desloca os maiores elementos para a direita
-        while (j >= 0 && v[j] > chave) {
-            v[j + 1] = v[j];
+        // Conta ao menos uma comparação por iteração do while
+        while (j >= 0 && (++comparacoes && v[j] > chave)) {
+            v[j + 1] = v[j]; // deslocamento (considerado troca)
+            trocas++;
             j--;
         }
 
-        // Insere a chave na posição correta
+        // Inserção da chave no lugar certo
         v[j + 1] = chave;
+        trocas++; // conta a inserção da chave como uma troca
     }
 }
