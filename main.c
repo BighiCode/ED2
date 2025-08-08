@@ -4,6 +4,7 @@
 #include "bolha.h"//1
 #include "insercaodireta.h"//2
 #include "insercaoBinaria.h"//3
+#include "shellSort.h"//4
 
 int main(void) {
     
@@ -70,7 +71,7 @@ int main(void) {
 
     start = clock();
     //testar função aqui ⬇️⬇️⬇️
-    insercaoBinaria(vetorAux2, tam);
+    shellSort(vetorAux2, tam);
     //testar função aqui ⬆️⬆️⬆️
     end = clock();
 
