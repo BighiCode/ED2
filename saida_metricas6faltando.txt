@@ -1,0 +1,6 @@
+Algoritmo: ordenamentoBolha | Tipo: decrescente | Tamanho: 999999 | Trocas: 499998500001 | Comparacoes: 499998500001 | Tempo: 2097.618000
+Algoritmo: ordenamentoBolhaCriterioParada | Tipo: decrescente | Tamanho: 999999 | Trocas: 499998500001 | Comparacoes: 499998500001 | Tempo: 3066.100000
+Algoritmo: insercaoDireta | Tipo: decrescente | Tamanho: 999999 | Trocas: 499999499999 | Comparacoes: 499998500001 | Tempo: 1262.161000
+Algoritmo: insercaoBinaria | Tipo: decrescente | Tamanho: 999999 | Trocas: 500000499997 | Comparacoes: 17951426 | Tempo: 785.027000
+Algoritmo: bucketSort | Tipo: decrescente | Tamanho: 999999 | Trocas: 2999997 | Comparacoes: 1999996 | Tempo: 0.080000
+Algoritmo: shellSort | Tipo: decrescente | Tamanho: 999999 | Trocas: 19145025 | Comparacoes: 26736674 | Tempo: 0.107000

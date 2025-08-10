@@ -18,7 +18,7 @@ int main(int argc, char *argv[]) {
         int n = atoi(argv[2]);
         for(int i = 1; i <= n; i++) {
             fprintf(f, "%d\n", i);
-            printf("%d\n", i);
+
         }
         fclose(f);
     }
@@ -28,7 +28,7 @@ int main(int argc, char *argv[]) {
         int n = atoi(argv[2]);
         for(int i = n; i > 0; i--) {
             fprintf(f, "%d\n", i);
-            printf("%d\n", i);
+
         }
         fclose(f);
     }
@@ -41,7 +41,7 @@ int main(int argc, char *argv[]) {
         for(int i = 1; i <= n; i++) {
             int r = rand() % n + 1;
             fprintf(f, "%d\n", r);
-            printf("%d\n", r);
+
         }
         fclose(f);
     }
