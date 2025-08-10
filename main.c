@@ -24,7 +24,7 @@
 #define ARQUIVO_SAIDA "saida_metricas.txt"
 
 #define N_FUNCS_2ARGS 9
-#define N_FUNCS_3ARGS 4
+#define N_FUNCS_3ARGS 3
 
 extern uint64_t trocas;
 extern uint64_t comparacoes;
