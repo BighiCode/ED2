@@ -1,6 +1,6 @@
 #include "bolha.h"
 
-void ordenarmentoBolha(int *vet, int tam) {
+void ordenamentoBolha(int *vet, int tam) {
     for (int i = 0; i < tam - 1; i++) {
         for (int j = 0; j < tam - i - 1; j++) {
             if (vet[j] > vet[j + 1]) {

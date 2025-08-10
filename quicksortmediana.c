@@ -21,8 +21,7 @@ static int medianaDeTres(int *vet, int inicio, int fim) {
     comparacoes++;
     if (vet[meio] > vet[fim]) troca(&vet[meio], &vet[fim]);
 
-    // Depois dos ajustes, o meio é a mediana
-    return meio;
+    return meio; // meio agora é a mediana
 }
 
 static int particionaMediana(int *vet, int inicio, int fim) {
@@ -45,10 +44,27 @@ static int particionaMediana(int *vet, int inicio, int fim) {
 }
 
 void quicksortMediana(int *vet, int inicio, int fim) {
-    comparacoes++; // para verificação da recursão
-    if (inicio < fim) {
-        int p = particionaMediana(vet, inicio, fim);
-        quicksortMediana(vet, inicio, p - 1);
-        quicksortMediana(vet, p + 1, fim);
+    // Caso base para evitar recursão desnecessária
+    if (inicio >= fim) return;
+
+    // Pequenos subvetores: usa inserção direta para eficiência
+    if (fim - inicio < 10) {
+        for (int i = inicio + 1; i <= fim; i++) {
+            int chave = vet[i];
+            int j = i - 1;
+            while (j >= inicio && (comparacoes++, vet[j] > chave)) {
+                vet[j + 1] = vet[j];
+                j--;
+                trocas++;
+            }
+            vet[j + 1] = chave;
+        }
+        return;
     }
+
+    int p = particionaMediana(vet, inicio, fim);
+
+    // Garante que a partição sempre progride
+    if (p > inicio) quicksortMediana(vet, inicio, p - 1);
+    if (p < fim) quicksortMediana(vet, p + 1, fim);
 }

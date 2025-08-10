@@ -4,7 +4,7 @@
 //começo
 
 
-void ordenarmentoBolha(int *vet, int tam);
+void ordenamentoBolha(int *vet, int tam);
 void ordenamentoBolhaCriterioParada(int *vet, int tam);
 //fim
 #endif
