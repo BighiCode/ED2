@@ -1,0 +1,1 @@
+Algoritmo: ordenamentoBolha | Tipo: decrescente | Tamanho: 99999 | Trocas: 4999850001 | Comparacoes: 4999850001 | Tempo: 18.584000
