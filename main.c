@@ -24,7 +24,7 @@
 #define ARQUIVO_SAIDA "saida_metricas.txt"
 
 #define N_FUNCS_2ARGS 0
-#define N_FUNCS_3ARGS 1
+#define N_FUNCS_3ARGS 0
 
 extern uint64_t trocas;
 extern uint64_t comparacoes;
@@ -60,11 +60,12 @@ void (*funcoes3args[N_FUNCS_3ARGS])(int *, int, int) = {
     /*quicksortCentro,
     mergeSort,
     quicksortMediana*/
-    quicksortFim
+    //quicksortFim
 };
 
 char *nomes3args[N_FUNCS_3ARGS] = {
-    "quicksortFim",/*
+    //"quicksortFim",
+    /*
     "quicksortCentro",
     "mergeSort",
     "quicksortMediana"*/
@@ -135,9 +136,9 @@ static void testarFuncoes3args(int *vetorOriginal, int tamanho, const char *tipo
 }
 
 int main(void) {
-    FILE *fd = fopen("resultados/d6", "r");
-    FILE *fc = fopen("resultados/c6", "r");
-    FILE *fr = fopen("resultados/r6", "r");
+    FILE *fd = fopen("gerador/d6", "r");
+    FILE *fc = fopen("gerador/c6", "r");
+    FILE *fr = fopen("gerador/r6", "r");
 
     if (!fd || !fc || !fr) {
         perror("Erro ao abrir arquivos");
@@ -187,6 +188,7 @@ int main(void) {
         return EXIT_FAILURE;
     }
 
+    
     testarFuncoes2args(listaD, tamd, "decrescente", saida);
     testarFuncoes3args(listaD, tamd, "decrescente", saida);
 
@@ -196,11 +198,20 @@ int main(void) {
     testarFuncoes2args(listaR, tamr, "randomico", saida);
     testarFuncoes3args(listaR, tamr, "randomico", saida);
 
-    fclose(saida);
+    quicksortCentro(listaR, 0, tamr - 1);
+    FILE *SaidaR = fopen("saidaR", "w");
+    for(int i = 0; i < tamr; i++){
+        fprintf(SaidaR, "%d\n", listaR[i]);
+    }
 
+    fclose(saida);
+    fclose(SaidaR);
     free(listaD);
     free(listaC);
     free(listaR);
+
+    
+    printf("\n");
 
     printf("Testes concluídos. Resultados gravados em %s\n", ARQUIVO_SAIDA);
     return EXIT_SUCCESS;

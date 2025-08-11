@@ -1,3 +1,0 @@
-Algoritmo: quicksortFim | Tipo: decrescente | Tamanho: 999999 | Trocas: 26055820 | Comparacoes: 40995314 | Tempo: 0.140000
-Algoritmo: quicksortFim | Tipo: crescente | Tamanho: 999999 | Trocas: 8916607 | Comparacoes: 16934463 | Tempo: 0.054000
-Algoritmo: quicksortFim | Tipo: randomico | Tamanho: 999999 | Trocas: 10293648 | Comparacoes: 30691999 | Tempo: 0.150000
