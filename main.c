@@ -34,8 +34,8 @@ void (*funcoes2args[N_FUNCS_2ARGS])(int *, int) = {
     ordenamentoBolha,
     ordenamentoBolhaCriterioParada,
     insercaoDireta,
-    insercaoBinaria,
-    bucketSort,
+   insercaoBinaria,
+   bucketSort,
     shellSort,
     radixSort,
     selecaoDireta,
@@ -43,14 +43,14 @@ void (*funcoes2args[N_FUNCS_2ARGS])(int *, int) = {
 };
 
 char *nomes2args[N_FUNCS_2ARGS] = {
-    "ordenamentoBolha",
+   "ordenamentoBolha",
     "ordenamentoBolhaCriterioParada",
     "insercaoDireta",
     "insercaoBinaria",
-    "bucketSort",
-    "shellSort",
+   "bucketSort",
+   "shellSort",
     "radixSort",
-    "selecaoDireta",
+   "selecaoDireta",
     "heapsort"
 };
 
@@ -65,6 +65,7 @@ char *nomes3args[N_FUNCS_3ARGS] = {
     "quicksortCentro",
     "mergeSort",
     "quicksortMediana"
+    
 };
 
 static void testarFuncoes2args(int *vetorOriginal, int tamanho, const char *tipo, FILE *saida) {

@@ -34,3 +34,5 @@ Algoritmo: heapsort | Tipo: randomico | Tamanho: 99999 | Trocas: 1574757 | Compa
 Algoritmo: quicksortCentro | Tipo: randomico | Tamanho: 99999 | Trocas: 1091582 | Comparacoes: 2125870 | Tempo: 0.015000
 Algoritmo: mergeSort | Tipo: randomico | Tamanho: 99999 | Trocas: 3337820 | Comparacoes: 1736123 | Tempo: 0.026000
 Algoritmo: quicksortMediana | Tipo: randomico | Tamanho: 99999 | Trocas: 905844 | Comparacoes: 1794321 | Tempo: 0.011000
+
+falta quicksortMediana
