@@ -23,15 +23,16 @@
 
 #define ARQUIVO_SAIDA "saida_metricas.txt"
 
-#define N_FUNCS_2ARGS 9
-#define N_FUNCS_3ARGS 3
+#define N_FUNCS_2ARGS 0
+#define N_FUNCS_3ARGS 1
 
 extern uint64_t trocas;
 extern uint64_t comparacoes;
 
 // Funções que recebem (int *v, int n)
 void (*funcoes2args[N_FUNCS_2ARGS])(int *, int) = {
-    ordenamentoBolha,
+    
+    /*ordenamentoBolha,
     ordenamentoBolhaCriterioParada,
     insercaoDireta,
    insercaoBinaria,
@@ -39,11 +40,11 @@ void (*funcoes2args[N_FUNCS_2ARGS])(int *, int) = {
     shellSort,
     radixSort,
     selecaoDireta,
-    heapsort
+    heapsort*/
 };
 
 char *nomes2args[N_FUNCS_2ARGS] = {
-   "ordenamentoBolha",
+   /*"ordenamentoBolha",
     "ordenamentoBolhaCriterioParada",
     "insercaoDireta",
     "insercaoBinaria",
@@ -51,20 +52,22 @@ char *nomes2args[N_FUNCS_2ARGS] = {
    "shellSort",
     "radixSort",
    "selecaoDireta",
-    "heapsort"
+    "heapsort"*/
 };
 
 // Funções que recebem (int *v, int inicio, int fim)
 void (*funcoes3args[N_FUNCS_3ARGS])(int *, int, int) = {
-    quicksortCentro,
+    /*quicksortCentro,
     mergeSort,
-    quicksortMediana
+    quicksortMediana*/
+    quicksortFim
 };
 
 char *nomes3args[N_FUNCS_3ARGS] = {
+    "quicksortFim",/*
     "quicksortCentro",
     "mergeSort",
-    "quicksortMediana"
+    "quicksortMediana"*/
     
 };
 
@@ -132,9 +135,9 @@ static void testarFuncoes3args(int *vetorOriginal, int tamanho, const char *tipo
 }
 
 int main(void) {
-    FILE *fd = fopen("gerador/d", "r");
-    FILE *fc = fopen("gerador/c", "r");
-    FILE *fr = fopen("gerador/r", "r");
+    FILE *fd = fopen("resultados/d6", "r");
+    FILE *fc = fopen("resultados/c6", "r");
+    FILE *fr = fopen("resultados/r6", "r");
 
     if (!fd || !fc || !fr) {
         perror("Erro ao abrir arquivos");
